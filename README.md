@@ -98,12 +98,8 @@ Here are some ideas for enhancements:
 
 Add more projects or a blog section
 
-Make it fully responsive (optimize for all device sizes)
-
-Add more interactivity (animations, hover effects)
+Add more interactivity (animations,)
 
 Use JavaScript to enhance navigation or add dynamic content
 
 Deploy via GitHub Pages or another hosting platform
-
-Add meta tags, SEO optimization, accessibility improvements
