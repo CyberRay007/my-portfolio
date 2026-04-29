@@ -1,105 +1,69 @@
-# My Portfolio
+# 🔐 Cybersecurity Portfolio --- 30-Day Lab Project Series
 
-As a dedicated Network Technician and Cybersecurity Professional, I specialize in building secure, resilient IT infrastructures that keep organizations connected, protected, and productive.
-Currently, I'm pursuing a degree in Computer Science at the National Open University of Nigeria, combining academic knowledge with real-world technical training. I hold certifications in Networking from Cisco and Alison, and I'm currently advancing my skills through a Cybersecurity course with Cisco, focusing on threat detection, secure network architecture, and proactive defense strategies.
-Alongside my core expertise in networking and security, I also have a background in HTML, CSS, and Python, which enhances my ability to understand application structures, support front-end functionality, and script automated solutions when needed.
-I have a strong foundation in network troubleshooting, firewall management, endpoint security, and threat analysis-skills that help me safeguard both data and connectivity.
-My goal is simple: ensure seamless operations while proactively defending against digital threats. Currently seeking to grow within a forward-thinking organization where I can apply my technical expertise, contribute to robust IT strategies, and evolve as a leader in cybersecurity and network management.
+> **Author:** Favour \| SOC Analyst \| Network & Cybersecurity
+> Professional\
+> **GitHub:** @cyberray007\
+> **Duration:** 30 Days\
+> **Level:** Beginner → Intermediate → Advanced (Red / Blue / Purple
+> Team)\
+> **Started:** April 29, 2026
 
+## 👨‍💻 About Me
 
-# Table of Contents
+I am a dedicated Network Technician and Cybersecurity Professional
+focused on building secure, resilient IT infrastructures.
 
-About
+I am currently pursuing a degree in Computer Science at the National
+Open University of Nigeria, combining academic learning with hands-on
+technical experience.
 
-Features
+I hold certifications in Networking (Cisco & Alison) and I am currently
+advancing my cybersecurity expertise through Cisco training.
 
-Demo
+Skills: - HTML, CSS, Python - Network troubleshooting - Firewall
+management - Endpoint security - Threat analysis
 
-Technologies
+## 🎯 Project Overview
 
-Getting Started
+This repository documents a 30-day cybersecurity lab series built in a
+VirtualBox home lab environment.
 
-Usage
+It demonstrates: - Blue Team (Defensive Security) - Red Team (Offensive
+Security) - Purple Team (Hybrid Security)
 
-Project Structure
+## 🏗️ Lab Infrastructure
 
-Future Improvements
+-   Host: Intel i7, 16GB RAM\
+-   Hypervisor: VirtualBox\
+-   Attacker VM: Kali Linux\
+-   Target VMs: Ubuntu, Windows Server, Metasploitable\
+-   SIEM: Splunk\
+-   Network: Host-Only (192.168.56.0/24)
 
-# About
+## 📅 Roadmap
 
-This is a personal portfolio site built to:
+Week 1: SIEM, Nmap, Threat Hunting\
+Week 2: Vulnerability Scanning, AD Lab\
+Week 3: Exploitation, Web Attacks\
+Week 4: Forensics, Purple Team, Reporting
 
-Showcase projects, skills, and background
+## 🧠 Skills
 
-Provide a clean and simple user experience
+Blue Team: - SIEM (Splunk) - Log analysis - Threat hunting
 
-Serve as an online presence
+Red Team: - Nmap scanning - Exploitation - Privilege escalation
 
-Features
+Purple Team: - Attack simulation - Detection tuning - SOC workflows
 
-Responsive design (works on desktop, tablet, and mobile)
+## 🌐 Portfolio Website
 
-# Navigation menu
+Built with: - HTML5 - CSS3
 
-Portfolio/projects section
+## 🚀 Setup
 
-Contact information with optional links to email/socials
+git clone https://github.com/CyberRay007/my-portfolio.git cd
+my-portfolio
 
-Custom styling to reflect personal branding
+## ⚠️ Disclaimer
 
-# Demo
-
-You can view the working site here: (https://github.com/CyberRay007/my-portfolio.git)
-
-Technologies
-
-HTML5
-
-CSS3
-
-# Getting Started
-
-To run this project locally:
-
-Clone the repository
-
-git clone https://github.com/CyberRay007/my-portfolio.git
-
-
-Navigate into the project folder
-
-cd my-portfolio
-
-
-Open My-Portfolio.html in a browser (double-click or via code editor preview)
-
-Optionally, host it via a local server for better testing (e.g. Live Server in VSCode)
-
-Usage
-
-This portfolio can be used as a template:
-
-Replace placeholder images and text with your own
-
-Adjust styling (colors, fonts, layout) to match your personal branding
-
-Add/remove sections (projects, testimonials, blog links, etc.) as needed
-
-Project Structure
-my-portfolio/
-│
-├── My-Portfolio.html         ← Main HTML file
-├── portfolio.css             ← Stylesheet for the page
-└── CV-Picture1.png           ← Profile / CV picture used in the page
-
-# Future Improvements
-
-Here are some ideas for enhancements:
-
-Add more projects or a blog section
-
-Add more interactivity (animations,)
-
-Use JavaScript to enhance navigation or add dynamic content
-
-Deploy via GitHub Pages or another hosting platform
+All activities were performed in a controlled lab environment.
