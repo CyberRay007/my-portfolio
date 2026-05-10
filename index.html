@@ -51,7 +51,60 @@ body{
 #cursor.big{width:36px;height:36px}
 
 
-/* profile photo */
+
+/* hero photo */
+.hero-photo-wrap{
+  position:absolute;
+  top:50%;left:3.5rem;
+  transform:translateY(-50%);
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+}
+.hero-photo{
+  width:220px;
+  height:280px;
+  object-fit:cover;
+  object-position:top;
+  border:2px solid var(--lime);
+  display:block;
+  filter:grayscale(15%);
+  transition:filter .3s, box-shadow .3s;
+  clip-path:polygon(0 0,100% 0,100% 88%,88% 100%,0 100%);
+}
+.hero-photo:hover{
+  filter:grayscale(0%);
+  box-shadow:0 0 40px rgba(184,255,87,.2);
+}
+.hero-photo-label{
+  background:var(--lime);
+  color:#09150a;
+  font-family:var(--mono);
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:.35rem 1rem;
+  width:100%;
+  text-align:center;
+  margin-top:-2px;
+}
+.hero-photo-name{
+  background:var(--bg2);
+  border:1px solid var(--border2);
+  border-top:none;
+  color:var(--muted);
+  font-family:var(--mono);
+  font-size:.6rem;
+  letter-spacing:.1em;
+  padding:.3rem 1rem;
+  width:100%;
+  text-align:center;
+}
+@media(max-width:900px){.hero-photo-wrap{display:none}}
+
 .profile-photo-wrap{
   position:relative;
   display:inline-block;
@@ -175,7 +228,7 @@ nav{
   pointer-events:none;
   white-space:nowrap;
 }
-.hero-content{max-width:720px;position:relative;z-index:1}
+.hero-content{max-width:600px;position:relative;z-index:1;margin-left:260px}
 .hero-eyebrow{
   font-family:var(--mono);
   font-size:.72rem;
@@ -560,6 +613,12 @@ footer{
 
 <!-- HERO -->
 <section id="hero">
+  <div class="hero-photo-wrap">
+    <img src="CV-Picture1.png" alt="Favour Raymond Joshua" class="hero-photo"/>
+    <div class="hero-photo-label">SOC Analyst</div>
+    <div class="hero-photo-name">Favour Raymond Joshua</div>
+  </div>
+
   <div class="hero-bg-text">SOC</div>
   <div class="hero-content">
     <div class="hero-eyebrow">Lagos, Nigeria — Cybersecurity Professional</div>
@@ -609,14 +668,8 @@ footer{
 <section class="section" id="about">
   <div class="sec-label" data-n="01 //">About Me</div>
   <h2 class="sec-title">Who I <span>Am</span></h2>
-    <div class="about-layout fi">
+  <div class="about-layout fi">
     <div>
-      <div class="profile-photo-wrap">
-        <img src="CV-Picture1.png" alt="Favour Raymond Joshua" class="profile-photo"/>
-        <div class="photo-badge">
-          <span class="pulse"></span> Open to Work
-        </div>
-      </div>
       <p class="about-p">I'm a SOC-focused Cybersecurity Analyst based in Lagos, Nigeria, with hands-on experience in threat detection, incident response, SIEM engineering, and both Blue and Red Team operations.</p>
       <p class="about-p">I build and document real-world security labs — from deploying Wazuh SIEM with Suricata IDS and rootkit detection, to cracking MD5 hashes with custom John the Ripper rule sets, to conducting full OSINT phishing investigations mapped to MITRE ATT&amp;CK.</p>
       <p class="about-p">I hold CompTIA CySA+ and multiple Cisco certifications. As a full-stack developer, I don't just detect threats — I build the tooling to fight them.</p>
