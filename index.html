@@ -50,6 +50,39 @@ body{
 }
 #cursor.big{width:36px;height:36px}
 
+
+/* profile photo */
+.profile-photo-wrap{
+  position:relative;
+  display:inline-block;
+  margin-bottom:2rem;
+}
+.profile-photo{
+  width:160px;height:160px;
+  border-radius:4px;
+  object-fit:cover;
+  object-position:top;
+  border:2px solid var(--lime);
+  display:block;
+  filter:grayscale(20%);
+  transition:filter .3s;
+}
+.profile-photo:hover{filter:grayscale(0%)}
+.photo-badge{
+  position:absolute;
+  bottom:-12px;left:0;right:0;
+  background:var(--bg2);
+  border:1px solid var(--lime);
+  border-radius:2px;
+  padding:.3rem .75rem;
+  display:flex;align-items:center;gap:.5rem;
+  font-family:var(--mono);
+  font-size:.62rem;
+  color:var(--lime);
+  letter-spacing:.1em;
+  width:fit-content;
+}
+
 /* scanline overlay */
 body::after{
   content:'';
@@ -543,7 +576,7 @@ footer{
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-lime">↓ View My Labs</a>
-      <a href="CV.pdf" class="btn btn-ghost" download>Download CV</a>
+      <a href="Favour_Raymond_Joshua_CV.pdf" class="btn btn-ghost" download>Download CV</a>
     </div>
   </div>
 
@@ -576,8 +609,14 @@ footer{
 <section class="section" id="about">
   <div class="sec-label" data-n="01 //">About Me</div>
   <h2 class="sec-title">Who I <span>Am</span></h2>
-  <div class="about-layout fi">
+    <div class="about-layout fi">
     <div>
+      <div class="profile-photo-wrap">
+        <img src="CV-Picture1.png" alt="Favour Raymond Joshua" class="profile-photo"/>
+        <div class="photo-badge">
+          <span class="pulse"></span> Open to Work
+        </div>
+      </div>
       <p class="about-p">I'm a SOC-focused Cybersecurity Analyst based in Lagos, Nigeria, with hands-on experience in threat detection, incident response, SIEM engineering, and both Blue and Red Team operations.</p>
       <p class="about-p">I build and document real-world security labs — from deploying Wazuh SIEM with Suricata IDS and rootkit detection, to cracking MD5 hashes with custom John the Ripper rule sets, to conducting full OSINT phishing investigations mapped to MITRE ATT&amp;CK.</p>
       <p class="about-p">I hold CompTIA CySA+ and multiple Cisco certifications. As a full-stack developer, I don't just detect threats — I build the tooling to fight them.</p>
@@ -587,7 +626,7 @@ footer{
       <div class="stat"><span class="stat-n">CySA+</span><span class="stat-l">CompTIA Certified</span></div>
       <div class="stat"><span class="stat-n">6×</span><span class="stat-l">Cisco Certs</span></div>
       <div class="stat"><span class="stat-n">30</span><span class="stat-l">Day Lab Series</span></div>
-      <div class="stat"><span class="stat-n">6+</span><span class="stat-l">SOC Projects</span></div>
+      <div class="stat"><span class="stat-n">7+</span><span class="stat-l">SOC Projects</span></div>
     </div>
   </div>
 </section>
@@ -608,7 +647,9 @@ footer{
     <div class="skill-item"><div class="sk-num">07</div><div><div class="sk-name">Network Security</div><div class="sk-desc">pfSense, VLAN segmentation, packet analysis (Wireshark, Nmap), IDS/IPS</div></div></div>
     <div class="skill-item"><div class="sk-num">08</div><div><div class="sk-name">Penetration Testing</div><div class="sk-desc">Burp Suite, Metasploit, Nmap, brute-force simulation, privilege escalation, lateral movement</div></div></div>
     <div class="skill-item"><div class="sk-num">09</div><div><div class="sk-name">Phishing &amp; IR</div><div class="sk-desc">Full OSINT phishing investigations, brand impersonation analysis, structured IR reports</div></div></div>
-    <div class="skill-item"><div class="sk-num">10</div><div><div class="sk-name">Scripting &amp; Dev</div><div class="sk-desc">Python, JavaScript, TypeScript, Node.js — automation, tooling &amp; API development</div></div></div>
+        <div class="skill-item"><div class="sk-num">11</div><div><div class="sk-name">Cloud Infrastructure</div><div class="sk-desc">AWS EC2 provisioning, VPC, security groups, Ubuntu server admin, MySQL 8.4, Apache2, SSH (MobaXterm)</div></div></div>
+    <div class="skill-item"><div class="sk-num">10</div><div><div class="sk-name">Cloud &amp; Infrastructure</div><div class="sk-desc">AWS EC2, two-tier architecture, Apache2, MySQL deployment, security group config, Ubuntu Server</div></div></div>
+    <div class="skill-item"><div class="sk-num">11</div><div><div class="sk-name">Scripting &amp; Dev</div><div class="sk-desc">Python, JavaScript, TypeScript, Node.js — automation, tooling &amp; API development</div></div></div>
   </div>
 </section>
 
@@ -619,6 +660,25 @@ footer{
   <div class="sec-label" data-n="03 //">Labs &amp; Projects</div>
   <h2 class="sec-title">SOC <span>Lab Series</span></h2>
   <div class="projects-layout fi">
+
+    <div class="proj hot">
+      <span class="proj-badge">FEATURED</span>
+      <div class="proj-yr">2026 · 30-Day Lab Series</div>
+      <div class="proj-title">AWS Cloud Deployment — Two-Tier E-Commerce Architecture (MySQL + PrestaShop)</div>
+      <div class="proj-desc">Provisioned two EC2 instances on AWS (eu-north-1): a dedicated MySQL 8.4.8 database server and a separate Apache/PHP app server. Deployed PrestaShop 8.1.7 across both instances with full DB separation, security group configuration, and live storefront confirmed. Identified post-deployment hardening requirements: install/ folder deletion, MySQL bind restriction, HTTPS/TLS, and admin path obfuscation.</div>
+      <div class="proj-tags"><span class="ptag">AWS EC2</span><span class="ptag">MySQL</span><span class="ptag">Apache2</span><span class="ptag">PrestaShop</span><span class="ptag">Ubuntu</span><span class="ptag">DevSecOps</span></div>
+      <a href="https://github.com/CyberRay007" target="_blank" class="proj-link">↗ View on GitHub</a>
+    </div>
+
+    
+    <div class="proj hot">
+      <span class="proj-badge">FEATURED</span>
+      <div class="proj-yr">2026 · 30-Day Lab Series</div>
+      <div class="proj-title">AWS Cloud Deployment — 2-Tier E-Commerce Infrastructure on EC2</div>
+      <div class="proj-desc">Provisioned two EC2 t3.micro instances on AWS (EU-North-1): a dedicated MySQL 8.4.8 database server and an Apache2/PrestaShop 8.1.7 application server. Configured VPC security groups, scoped DB user permissions, enabled mod_rewrite, and verified a fully working storefront + admin dashboard end to end.</div>
+      <div class="proj-tags"><span class="ptag">AWS EC2</span><span class="ptag">MySQL 8.4</span><span class="ptag">Apache2</span><span class="ptag">PrestaShop</span><span class="ptag">Ubuntu</span><span class="ptag">SSH</span></div>
+      <a href="https://github.com/CyberRay007" target="_blank" class="proj-link">&#8599; View on GitHub</a>
+    </div>
 
     <div class="proj hot">
       <span class="proj-badge">FEATURED</span>
