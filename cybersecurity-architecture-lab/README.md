@@ -1,42 +1,48 @@
-# Network Security Architecture — Perimeter Defense Design
+# Cybersecurity Architecture Lab — Security Architecture Diagram
 
-**Course:** [Cybersecurity Architecture](https://www.coursera.org/learn/cybersecurity-architecture/home/welcome) (IBM, Coursera)
-**Tool used:** Visual Paradigm Online
-**Type:** Hands-on lab / conceptual network diagram
+This lab covers the fundamentals of security architecture diagramming: security
+zones, trust boundaries, and control placement for a simple e-commerce web
+application.
 
-## Overview
+## Scenario
 
-This lab is a hands-on network architecture exercise from IBM's Cybersecurity Architecture course on Coursera. The task was to design a small organization's network so that it enforces defense-in-depth: multiple independent security layers between the public internet and the internal LAN, rather than relying on a single perimeter control.
+A public-facing e-commerce application with:
+- A website where customers browse and shop
+- An administrative portal for staff to manage products and orders
+- A database storing customer information and orders
 
-## Architecture Diagram
+## Diagram
 
-![Network Security Architecture Diagram](./network-architecture-diagram.png)
+![Intermediate security architecture](intermediate_security_architecture.svg)
 
-## Design Breakdown
+[View live diagram (read-only)](https://viewer.diagrams.net/?url=https://raw.githubusercontent.com/CyberRay007/my-portfolio/main/cybersecurity-architecture-lab/intermediate_security_architecture.drawio)
 
-**Perimeter ingress**
-- **ISP Internet Connection → Modem → Firewall #1 → Router** — traffic entering the network passes through a firewall immediately after the modem, before it ever reaches routing logic. This is the first layer of defense-in-depth: nothing gets routed anywhere internal without being filtered first.
+The diagram segments the application into five trust zones, each separated by
+a dedicated control:
 
-**DMZ (demilitarized zone)**
-- **Web Server / DNS Server** sit in their own segment behind the router, boxed off from both the internet and the internal network. These are the only two services the outside world needs to reach, so isolating them here means a compromise of either box doesn't hand an attacker a direct path to internal systems.
+| Zone | Trust level | Contains |
+|---|---|---|
+| Internet zone | Untrusted | External users |
+| — | — | Perimeter firewall + WAF (blocks common web attacks) |
+| DMZ | Semi-trusted | Load balancer, web servers (TLS termination) |
+| — | — | Internal firewall (app-tier allowlist only) |
+| Application zone | Trusted | App server, auth / API gateway |
+| — | — | Data-tier firewall (encrypted connections only) |
+| Data zone | Highly trusted | Primary database, backup / replica (encrypted at rest) |
+| Management zone | Out-of-band | Bastion host (MFA), SIEM / logging |
 
-**Internal perimeter**
-- **Firewall #2 → IDS (Intrusion Detection System)** — a second, independent firewall sits between the DMZ and the internal network, so a breach of the DMZ doesn't automatically breach the LAN. The IDS immediately behind it inspects traffic crossing that boundary and flags anomalous activity, giving visibility into attacks that get past the firewall rule set.
+**Design principles applied:**
+- Every hop between zones crosses a security control — no direct access
+  across a trust boundary
+- Sensitive data (the database) sits furthest from the untrusted zone
+- Administrative access is routed through a bastion host rather than directly
+  into the application tier
+- Centralized logging (SIEM) aggregates events from all zones for monitoring
 
-**Core distribution**
-- **Switch** — the core switching point that fans out to the two internal segments: the wireless network and the wired LAN.
+## Source file
 
-**Access layer**
-- **Wireless Router → laptops** — wireless clients sit on their own branch off the switch, separated from the wired LAN.
-- **LAN** — the wired segment houses workstations and an internal server, reachable only after traffic has passed both firewalls and the IDS.
-
-## Security Principles Demonstrated
-
-- **Defense in depth** — two firewalls and an IDS stand between the internet and the LAN, not one.
-- **Network segmentation** — DMZ, wireless, and wired LAN are all isolated from each other, limiting lateral movement if any single segment is compromised.
-- **Least exposure** — only the Web and DNS servers are internet-facing; everything else sits behind at least one additional firewall.
-- **Monitoring at trust boundaries** — the IDS is placed exactly at the internal/external trust boundary, not buried deep inside the LAN where it would catch threats too late.
-
-## Notes
-
-This diagram documents the conceptual design produced during the lab; it is not a live or production environment. Shared here as part of ongoing cybersecurity coursework and portfolio documentation.
+The editable `.drawio` source lives in this folder alongside the rendered
+image. The "View live diagram" link above opens it through draw.io's
+read-only viewer, so anyone can explore the full diagram without being able
+to edit or save changes — only someone with push access to this repo can
+change the source.
