@@ -1,0 +1,229 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Jackson Security Architecture" id="dMxNpLVBHR0GBizuuywB">
+    <mxGraphModel dx="2583" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-3" parent="1" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" value="JACKSON CORPORATION – SECURITY ARCHITECTURE DIAGRAM (Target State)" vertex="1">
+          <mxGeometry height="40" width="1600" x="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-4" parent="1" style="text;html=1;fontSize=12;align=left;verticalAlign=middle;fontColor=#555555;whiteSpace=wrap;" value="Defence-in-depth: Internet (untrusted) → External Firewall → DMZ (semi-trusted) → Internal Firewall → Internal Zone (trusted) with a protected data zone, Zero Trust segmentation and central SIEM/XDR monitoring" vertex="1">
+          <mxGeometry height="30" width="1600" x="-800" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-5" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" value="INTERNET ZONE (Untrusted)" vertex="1">
+          <mxGeometry height="830" width="240" x="-800" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-6" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" value="DMZ ZONE (Semi-Trusted)" vertex="1">
+          <mxGeometry height="830" width="340" x="-470" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-7" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" value="&amp;nbsp;&amp;nbsp; " vertex="1">
+          <mxGeometry height="830" width="860" x="-60" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-8" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" value="GUEST / WIRELESS ZONE (Isolated)" vertex="1">
+          <mxGeometry height="140" width="330" x="-800" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-9" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="PROTECTED DATA ZONE" vertex="1">
+          <mxGeometry height="340" width="220" x="560" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-10" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=14;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;dashed=1;" value="WIRED OFFICE NETWORK (VLAN segments)" vertex="1">
+          <mxGeometry height="170" width="280" x="260" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-11" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" value="Customers (public internet users)" vertex="1">
+          <mxGeometry height="60" width="180" x="-770" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-12" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" value="Threat actors / bots (scans, DDoS, exploits)" vertex="1">
+          <mxGeometry height="60" width="180" x="-770" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-13" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" value="Remote employees (public / unsecured networks)" vertex="1">
+          <mxGeometry height="60" width="180" x="-770" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-14" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#a50000;strokeColor=#660000;fontColor=#ffffff;fontStyle=1;fontSize=12;horizontal=0;" value="EXTERNAL FIREWALL (Outer Barrier)" vertex="1">
+          <mxGeometry height="560" width="50" x="-535" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-15" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#a50000;strokeColor=#660000;fontColor=#ffffff;fontStyle=1;fontSize=12;horizontal=0;" value="INTERNAL FIREWALL (Inner Barrier)" vertex="1">
+          <mxGeometry height="560" width="50" x="-120" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-16" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="WAF – blocks OWASP attacks (SQLi, XSS, brute force)" vertex="1">
+          <mxGeometry height="60" width="260" x="-430" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-17" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="IDS/IPS – inline threat detection and prevention" vertex="1">
+          <mxGeometry height="60" width="260" x="-430" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-18" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="Web Server (relocated from internal network)" vertex="1">
+          <mxGeometry height="60" width="260" x="-430" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-19" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="VPN Gateway – IPsec/TLS tunnel + MFA" vertex="1">
+          <mxGeometry height="60" width="260" x="-430" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-20" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=10;fontStyle=2;size=10;" value="Only HTTPS 443 and VPN are allowed in. Nothing in the DMZ can reach the database directly." vertex="1">
+          <mxGeometry height="60" width="260" x="-430" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-21" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="Application Servers (server-side input validation + sanitization)" vertex="1">
+          <mxGeometry height="60" width="220" x="-20" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-22" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="DevSecOps Pipeline (automated code scans, secure coding)" vertex="1">
+          <mxGeometry height="60" width="220" x="-20" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-23" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="IAM + MFA + Directory (least privilege, 15-min timeout)" vertex="1">
+          <mxGeometry height="60" width="220" x="-20" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-24" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;;" value="Database Firewall / ACL (3rd layer)" vertex="1">
+          <mxGeometry height="50" width="180" x="580" y="353" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-25" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Database Servers (AES-256 encrypted at rest: card data, PII)" vertex="1">
+          <mxGeometry height="70" width="180" x="580" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-26" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="HR VLAN" vertex="1">
+          <mxGeometry height="35" width="240" x="280" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-27" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="Marketing VLAN" vertex="1">
+          <mxGeometry height="35" width="240" x="280" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-28" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="IT / Dev VLAN" vertex="1">
+          <mxGeometry height="35" width="240" x="280" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-29" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Company laptops: approved software only + XDR agent" vertex="1">
+          <mxGeometry height="80" width="170" x="560" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-30" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#fad7ac;strokeColor=#b46504;fontStyle=1;fontSize=12;" value="SIEM + XDR – central log collection from ALL zones, real-time correlation, threat hunting" vertex="1">
+          <mxGeometry height="70" width="800" x="-20" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-31" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="SOC / IT Security Team – instant alerts and incident response" vertex="1">
+          <mxGeometry height="50" width="300" x="280" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-32" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#333333;fontSize=11;" value="Guest and wireless devices (separate SSID/VLAN)" vertex="1">
+          <mxGeometry height="50" width="290" x="-780" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-33" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.089;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-14" value="HTTPS (TLS) 443">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-34" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.089;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-16" value="HTTPS 443 only">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-35" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;" target="bQ9Dz2FVQqVBsyvt8Nis-17" value="Filtered HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-36" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;" target="bQ9Dz2FVQqVBsyvt8Nis-18" value="Inspected HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-37" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#c62828;endArrow=cross;fontSize=11;fontColor=#c62828;labelBackgroundColor=#ffffff;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.321;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-14" value="BLOCKED">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-38" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.804;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-14" value="VPN (IPsec/TLS)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-39" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.804;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-19" value="VPN only">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-40" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.446;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-15" value="HTTPS (TLS), approved app ports only">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-41" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.446;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-21" value="Internal API (TLS)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-42" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.804;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-15" value="Encrypted tunnel + MFA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-43" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.804;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-23" value="Authenticated access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-44" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-24" value="SQL over TLS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-45" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;" target="bQ9Dz2FVQqVBsyvt8Nis-25" value="Restricted DB accounts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-46" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-21" value="Secure deploy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-47" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-21" value="HTTPS / internal API (TLS)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-48" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-21" value="Authorizes access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-49" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#1565c0;endArrow=block;fontSize=11;fontColor=#1565c0;labelBackgroundColor=#ffffff;dashed=1;exitX=1;exitY=0.869;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-30" value="Logs (WAF, IDS/IPS, FW, web) via syslog/TLS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-50" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#1565c0;endArrow=block;fontSize=11;fontColor=#1565c0;labelBackgroundColor=#ffffff;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.15;entryY=0;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-30" value="Auth logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-51" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#1565c0;endArrow=block;fontSize=11;fontColor=#1565c0;labelBackgroundColor=#ffffff;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-30" value="Endpoint logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-52" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#1565c0;endArrow=block;fontSize=11;fontColor=#1565c0;labelBackgroundColor=#ffffff;dashed=1;exitX=0.95;exitY=1;exitDx=0;exitDy=0;entryX=0.986;entryY=0;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-30" value="DB audit logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-53" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-30" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#c62828;endArrow=block;fontSize=11;fontColor=#c62828;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-31" value="Instant alerts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-54" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#2e7d32;endArrow=block;fontSize=11;fontColor=#2e7d32;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-5" value="Internet only">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-55" edge="1" parent="1" source="bQ9Dz2FVQqVBsyvt8Nis-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#c62828;endArrow=cross;fontSize=11;fontColor=#c62828;labelBackgroundColor=#ffffff;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.1;entryY=1;entryDx=0;entryDy=0;" target="bQ9Dz2FVQqVBsyvt8Nis-7" value="BLOCKED – no access to internal files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-56" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#fff9c4;strokeColor=#f9a825;align=left;verticalAlign=top;spacing=10;fontSize=11;" value="&lt;b&gt;SECURITY ANNOTATIONS&lt;/b&gt;&lt;br&gt;&lt;br&gt; &lt;b&gt;1. External Firewall&lt;/b&gt; – first barrier. Blocks generic internet threats; allows only HTTPS to the WAF and VPN traffic to the gateway.&lt;br&gt;&lt;br&gt; &lt;b&gt;2. WAF&lt;/b&gt; – OWASP protection: blocks injection/XSS payloads, rate-limits login attempts (brute force).&lt;br&gt;&lt;br&gt; &lt;b&gt;3. IDS/IPS&lt;/b&gt; – real-time detection and blocking on both firewall boundaries; alerts go to SIEM.&lt;br&gt;&lt;br&gt; &lt;b&gt;4. Web Server (DMZ)&lt;/b&gt; – moved out of the internal network; TLS only; shows generic error messages to the public.&lt;br&gt;&lt;br&gt; &lt;b&gt;5. Internal Firewall&lt;/b&gt; – second barrier. Only approved web-to-app traffic passes inward; the DMZ cannot reach the database.&lt;br&gt;&lt;br&gt; &lt;b&gt;6. App Servers&lt;/b&gt; – input validation and sanitization; detailed errors go only to the secure internal log, never to users.&lt;br&gt;&lt;br&gt; &lt;b&gt;7. IAM + MFA&lt;/b&gt; – passwords 12–14+ chars, common-password blocklist, MFA, least privilege, auto-logout after 15 min inactivity with one-time-code re-verification.&lt;br&gt;&lt;br&gt; &lt;b&gt;8. Database zone&lt;/b&gt; – 3 layers (external FW, internal FW, DB firewall). AES-256 encryption at rest, TLS in transit, access limited to authorized systems/people.&lt;br&gt;&lt;br&gt; &lt;b&gt;9. VPN Gateway&lt;/b&gt; – mandatory encrypted tunnel for remote staff; laptops run approved software only.&lt;br&gt;&lt;br&gt; &lt;b&gt;10. Segmentation&lt;/b&gt; – HR, Marketing and IT VLANs cannot exchange files without approval; guest Wi-Fi is internet-only.&lt;br&gt;&lt;br&gt; &lt;b&gt;11. SIEM + XDR&lt;/b&gt; – logs from all zones, continuous threat hunting, instant alerts to the IT team.&lt;br&gt;&lt;br&gt; &lt;b&gt;12. DevSecOps&lt;/b&gt; – automated code scanning on every commit, secure coding training, continuous security testing." vertex="1">
+          <mxGeometry height="830" width="400" x="840" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-57" parent="1" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#333333;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=13;" value="LEGEND" vertex="1">
+          <mxGeometry height="300" width="400" x="840" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-58" parent="1" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="20" width="40" x="855" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-59" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Internet zone (untrusted)" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-60" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="20" width="40" x="855" y="995" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-61" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="DMZ (semi-trusted)" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-62" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="20" width="40" x="855" y="1025" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-63" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Internal zone (trusted) / Guest zone in orange" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-64" parent="1" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="20" width="40" x="855" y="1055" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-65" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Protected data zone / database" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-66" parent="1" style="rounded=0;fillColor=#a50000;strokeColor=#660000;" value="" vertex="1">
+          <mxGeometry height="20" width="40" x="855" y="1085" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-67" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Firewall (zone boundary control)" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-68" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="20" width="40" x="855" y="1115" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-69" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Security control (WAF, IDS/IPS, VPN, IAM, SIEM)" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-70" parent="1" style="rounded=1;fillColor=#ffffff;strokeColor=#333333;" value="" vertex="1">
+          <mxGeometry height="20" width="40" x="855" y="1145" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-71" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Server / endpoint / user" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-72" parent="1" style="endArrow=none;shape=line;strokeColor=#2e7d32;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="10" width="40" x="855" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-73" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Solid green = encrypted traffic (protocol labeled)" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-74" parent="1" style="endArrow=none;shape=line;strokeColor=#1565c0;strokeWidth=3;dashed=1;" value="" vertex="1">
+          <mxGeometry height="10" width="40" x="855" y="1205" as="geometry" />
+        </mxCell>
+        <mxCell id="bQ9Dz2FVQqVBsyvt8Nis-75" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Dashed blue = logs to SIEM  |  Dashed red = blocked" vertex="1">
+          <mxGeometry height="30" width="320" x="905" y="1195" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
